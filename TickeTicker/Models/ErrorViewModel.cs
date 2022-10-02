@@ -1,4 +1,4 @@
-namespace TickeTicker.Models
+﻿namespace TickeTicker.Models
 {
     public class ErrorViewModel
     {
