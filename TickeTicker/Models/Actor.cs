@@ -9,5 +9,8 @@ namespace TickeTicker.Models
         public String ProfilePictureURL { get; set; }
         public string Name { get; set; }
         public String Bio { get; set; }
+
+        //Relationship
+        public List<Actor_Movie> Actors_Movies { get; set; }
     }
 }
