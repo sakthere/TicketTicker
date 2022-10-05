@@ -1,0 +1,1 @@
+﻿create database ecommerce_app_db

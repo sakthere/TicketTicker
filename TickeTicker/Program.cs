@@ -1,12 +1,17 @@
-using TickeTicker.Data;
+using Microsoft.EntityFrameworkCore;
+using TickeTicker.Data; 
 
 var builder = WebApplication.CreateBuilder(args);
+string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 //DbContext Configuration
-builder.Services.AddDbContext<AppDbContext>();
+builder.Services.AddDbContext<AppDbContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
